@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container glass">
+        <h1>Color Palette Generator</h1>
+
+        <!-- Theme Selector -->
+        <div>
+            <label for="theme-selector">Select Theme: </label>
+            <select id="theme-selector">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </div>
+
+        <!-- Option to choose random or base color -->
+        <div>
+            <label for="color-option">Choose Color Option:</label>
+            <input type="radio" id="random-color" name="color-option" value="random" checked>
+            <label for="random-color">Random Color</label>
+            <input type="radio" id="base-color-option" name="color-option" value="base">
+            <label for="base-color-option">Select Base Color</label>
+        </div>
+
+        <!-- Input field for number of colors -->
+        <div>
+            <label for="color-count">Number of Colors (min 3): </label>
+            <input type="number" id="color-count" value="5" min="3">
+        </div>
+
+        <!-- Color Picker for base color (hidden by default) -->
+        <div id="color-picker-container" style="display:none;">
+            <label for="base-color">Pick a base color: </label>
+            <input type="color" id="base-color" value="#ff0000">
+        </div>
+
+        <div class="palette glass"></div>
+
+        <button class="generate-btn glass">Generate Palette</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
